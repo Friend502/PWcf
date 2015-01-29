@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="PWCF.Service_IDLT_Contract" CodeBehind="Service_IDLT_Contract.svc.cs" %>

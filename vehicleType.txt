@@ -1,0 +1,2 @@
+﻿001,-xoo-xo_1.png,5 Door,Personal car up to 5 people.,5 ประตู, รถยนต์นั่งส่วนบุคคลไม่เกิน 7 คน
+002,-xoo-xo_2.png,5 Door,Personal car up to 5 people.,4 ประตู, รถยนต์นั่งส่วนบุคคลเกิน 7 คน

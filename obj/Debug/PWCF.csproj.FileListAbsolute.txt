@@ -1,0 +1,5 @@
+C:\Users\Boom\Documents\ProjectByDtac\Paysbuy_Security\WCF\PhoneWCF\PWCF\PWCF\bin\PWCF.dll
+C:\Users\Boom\Documents\ProjectByDtac\Paysbuy_Security\WCF\PhoneWCF\PWCF\PWCF\bin\PWCF.pdb
+C:\Users\Boom\Documents\ProjectByDtac\Paysbuy_Security\WCF\PhoneWCF\PWCF\PWCF\obj\Debug\PWCF.dll
+C:\Users\Boom\Documents\ProjectByDtac\Paysbuy_Security\WCF\PhoneWCF\PWCF\PWCF\obj\Debug\PWCF.pdb
+C:\Users\Boom\Documents\ProjectByDtac\Paysbuy_Security\WCF\PhoneWCF\PWCF\PWCF\obj\Debug\PWCF.csprojResolveAssemblyReference.cache

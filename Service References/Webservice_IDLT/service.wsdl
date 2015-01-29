@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://119.46.91.238/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://119.46.91.238/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://119.46.91.238/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="P_CAL_TAX_MBL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TOKEN_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SOFF_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SBR_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STYPE_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPLATE1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPLATE2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SID_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STEL_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPOLICY_FLAG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPOLICY_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPOLICY_END" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SADV_FLAG" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPHONE_NETW" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SIDTAX_NETW" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SOPR_PAY" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="P_CAL_TAX_MBLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="P_CAL_TAX_MBLResult" type="tns:DLT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DLT">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result01" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result02" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result03" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result04" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result05" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result06" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result07" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Result08" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="P_RECV_TAX_MBL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TOKEN_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SPHONE_NETW" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SREF_NO1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SRECV_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SRECV_AMT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSEND_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSEND_ADDR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSEND_DIST" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSEND_AMP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSEND_PRV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SSEND_ZIP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_NAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_BUILD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_ADDR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_MOO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_SOI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_ROAD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_DIST" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_AMP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_PRV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SINS_ZIP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="P_RECV_TAX_MBLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="P_RECV_TAX_MBLResult" type="tns:DLT" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="P_CAL_TAX_MBLSoapIn">
+    <wsdl:part name="parameters" element="tns:P_CAL_TAX_MBL" />
+  </wsdl:message>
+  <wsdl:message name="P_CAL_TAX_MBLSoapOut">
+    <wsdl:part name="parameters" element="tns:P_CAL_TAX_MBLResponse" />
+  </wsdl:message>
+  <wsdl:message name="P_RECV_TAX_MBLSoapIn">
+    <wsdl:part name="parameters" element="tns:P_RECV_TAX_MBL" />
+  </wsdl:message>
+  <wsdl:message name="P_RECV_TAX_MBLSoapOut">
+    <wsdl:part name="parameters" element="tns:P_RECV_TAX_MBLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="P_CAL_TAX_MBL">
+      <wsdl:input message="tns:P_CAL_TAX_MBLSoapIn" />
+      <wsdl:output message="tns:P_CAL_TAX_MBLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="P_RECV_TAX_MBL">
+      <wsdl:input message="tns:P_RECV_TAX_MBLSoapIn" />
+      <wsdl:output message="tns:P_RECV_TAX_MBLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://119.46.91.238/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="P_CAL_TAX_MBL">
+      <soap:operation soapAction="http://119.46.91.238/P_CAL_TAX_MBL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="P_RECV_TAX_MBL">
+      <soap:operation soapAction="http://119.46.91.238/P_RECV_TAX_MBL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://119.46.91.238/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="P_CAL_TAX_MBL">
+      <soap12:operation soapAction="http://119.46.91.238/P_CAL_TAX_MBL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="P_RECV_TAX_MBL">
+      <soap12:operation soapAction="http://119.46.91.238/P_RECV_TAX_MBL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://119.46.91.238/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://119.46.91.238/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
