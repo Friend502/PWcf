@@ -1,0 +1,77 @@
+﻿1,Bangkok,กรุงเทพมหานคร
+2,Krabi,กระบี่
+3,Kanchanaburi,กาญจนบุรี
+4,Kalasin,กาฬสินธุ์
+5,Kamphaengphet,กำแพงเพชร
+6,Khon Kaen,ขอนแก่น
+7,Chachoengsao,ฉะเชิงเทรา
+8,Chanthaburi,จันทบุรี
+9,Chonburi,ชลบุรี
+10,Chainat,ชัยนาท
+11,Chaiyaphum,ชัยภูมิ
+12,Chumporn,ชุมพร
+13,Chiang Rai,เชียงราย
+14,Chiang Mai,เชียงใหม่
+15,Trad,ตราด
+16,Trang,ตรัง
+17,Tak,ตาก
+18,Nakhon Nayok,นครนายก
+19,Nakhon Pathom,นครปฐม
+20,Nakhon Phanom,นครพนม
+21,Nakhon Ratchasima,นครราชสีมา
+22,Nakhon Sri Thammarat,นครศรีธรรมราช
+23,Nakhon Sawan,นครสวรรค์
+24,Nonthaburi,นนทบุรี
+25,Narathiwat,นราธิวาส
+26,Nan,น่าน
+27,Buri Ram,บุรีรัมย์
+28,Pathum Thani,ปทุมธานี
+29,Prachuap Khiri Khan,ประจวบคีรีขันธ์
+30,Prachinburi,ปราจีนบุรี
+31,Pattani,ปัตตานี
+32,Ayuthaya,พระนครศรีอยุธยา
+33,Phayao,พะเยา
+34,Pichit,พิจิตร
+35,Phitsanulok,พิษณุโลก
+36,Phetchabun,เพชรบูรณ์
+37,Petchaburi,เพชรบุรี
+38,Phrae,แพร่
+39,Phangnga,พังงา
+40,Phatthalung,พัทลุง
+41,Phuket,ภูเก็ต
+42,Mukdahan,มุกดาหาร
+43,Maha Sara Khram,มหาสารคาม
+44,Mae Hong Son,แม่ฮ่องสอน
+45,Yala,ยะลา
+46,Yasothon,ยโสธร
+47,Roi Et,ร้อยเอ็ด
+48,Ranong,ระนอง
+49,Rayong,ระยอง
+50,Ratchaburi,ราชบุรี
+51,Lopburi,ลพบุรี
+52,Lampang,ลำปาง
+53,Lamphun,ลำพูน
+54,Loei,เลย
+55,Si Sa Ket,ศรีสะเกษ
+56,Sakon Nakhon,สกลนคร
+57,Songkhla,สงขลา
+58,Satun,สตูล
+59,Samut Prakan,สมุทรปราการ
+60,Samut Sakhon,สมุทรสาคร
+61,Samutsongkram,สมุทรสงคราม
+62,Sakaew,สระแก้ว
+63,Saraburi,สระบุรี
+64,Singburi,สิงห์บุรี
+65,Sukhothai,สุโขทัย
+66,Suphanburi,สุพรรณบุรี
+67,Surat Thani,สุราษฎร์ธานี
+68,Surin,สุรินทร์
+69,Nong Khai,หนองคาย
+70,Nongbua Lampoo,หนองบัวลำภู
+71,Ang Thong,อ่างทอง
+72,Ubonratchatani,อุบลราชธานี
+73,Uthai Thani,อุทัยธานี
+74,Udon Thani,อุดรธานี
+75,Uttaradit,อุตรดิตถ์
+76,Amnartcharoen,อำนาจเจริญ
+77,Others,อื่นๆ

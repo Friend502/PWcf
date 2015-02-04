@@ -23,16 +23,15 @@ namespace PWCF
         List<VehicleType> GetVehicleType(RequestvehicleType obj);  
 
         [OperationContract]
-        [FaultContract(typeof(string))]
         ResponseP_CAL_TAX_MBL GetInquiryVehicleInformation(RequestP_CAL_TAX_MBL obj); 
 
         [OperationContract]
-        [FaultContract(typeof(string))]
         ResponseP_RECV_TAX_MBL GetConfirmTaxPayment(RequestP_RECV_TAX_MBL obj);
 
-
-
-       
+      
+      
+      
+     
     }
 
     // XML------------------------------------------------------------------- P_CAL_TAX_MBL
@@ -75,6 +74,8 @@ namespace PWCF
         [DataMember]
         public string paysbuyRefId { get; set; } //หมายเลขอ้างอิงของกรม
         [DataMember]
+        public string buyInsurance { get; set; } // เปิดช่องให้ Key (Y,N)
+        [DataMember]
         public string displayTaxTotal { get; set; } //จำนวนเงิน ค่าภาษีรถ
         [DataMember]
         public string displayFinesTotal { get; set; } //เงินเพิ่ม
@@ -90,6 +91,8 @@ namespace PWCF
         public string paymentDueDate { get; set; } //วันครบกำหนดชำระเงิน
         [DataMember]
         public string totalAmount { get; set; } //จำนวนชำระทั้งหมดสิ้น(จำนวนเงิน ค่าภาษีรถ+เงินเพิ่ม+ค่าเบี้ยประกันภัย+ค่าส่งเอกสารกลับ)
+        [DataMember]
+        public string Paysbuyfee { get; set; } //ยอดเรียกเก็บจาก Paysbuy
     }
 
 
@@ -106,6 +109,7 @@ namespace PWCF
         public string confirmPaymentAmoun;//InquiryVehicleInformation.totalAmount
         public string transactionId;//Cellum uniq transaction id
         public string bankTransactionId;//Cellum original bank transaction id
+        public string inquiryRefId;//inquiryRefId
         public string recipientsFullName;//ชื่อ นามสกุล ผู้รับเอกสาร
         public string recipientsAddress;//ที่อยู่ ผู้รับเอกสาร
         public string recipientsDistrict;//ตำบล
@@ -148,15 +152,14 @@ namespace PWCF
     //---------------------------------------------------------------------- Province
     public class Requestprovince
     {
-        [MessageHeader]
+        [DataMember]
         public string secureCode;
-
     }
 
     [DataContract]
     public class province
     {
-        public province(string provinceid, string provincenameTH, string provincenameENG)
+        public province(int provinceid, string provincenameTH, string provincenameENG)
         {
             Provinceid = provinceid;
             ProvincenameTH = provincenameTH;
@@ -164,7 +167,7 @@ namespace PWCF
 
         }
         [DataMember]
-        public string Provinceid { get; set; }
+        public int Provinceid { get; set; }
         [DataMember]
         public string ProvincenameTH { get; set; }
         [DataMember]
@@ -177,14 +180,15 @@ namespace PWCF
     //----------------------------------------------------------------------VehicleType
      public class RequestvehicleType
     {
-        [MessageHeader]
+
+        [DataMember]
         public string secureCode;
 
     }
     [DataContract]
     public class VehicleType
     {
-        public VehicleType(string vehicleTypeId, string vehicleTypeImage, string vehicleTypeNameTH,
+        public VehicleType(Int32 vehicleTypeId, string vehicleTypeImage, string vehicleTypeNameTH,
                             string vehicleTypeNameTHDetail, string vehicleTypeNameEN , string vehicleTypeNameENDetail)
         {
             VehicleTypeId = vehicleTypeId;
@@ -195,8 +199,9 @@ namespace PWCF
             VehicleTypeNameENDetail = vehicleTypeNameENDetail;
 
         }
+      
         [DataMember]
-        public string VehicleTypeId { get; set; }
+        public Int32 VehicleTypeId { get; set; }
         [DataMember]
         public string VehicleTypeImage { get; set; }
         [DataMember]
@@ -209,5 +214,5 @@ namespace PWCF
         public string VehicleTypeNameENDetail { get; set; }
     }
     //----------------------------------------------------------------------VehicleType
-    
+   
 }

@@ -6,6 +6,7 @@ using System.Text;
 using System.Collections;
 
 using System.Text.RegularExpressions;
+using System.IO;
 namespace PWCF
 {
     public class Class_Fuction
@@ -17,20 +18,90 @@ namespace PWCF
             return ReturnValue;
         }
 
- 
+        public string returncheck_Message2(string P_CAL_TAX_MBL_message)
+        {
+            if (P_CAL_TAX_MBL_message != "")
+            {
+
+                List<string> list = new List<string>();
+                list.Add("500 Important data cannot not be null.");//Important data cannot not be null.
+                list.Add("592 Cannot process . Over a 5 or 7 year old car.");//Cannot process . Over a 5 or 7 year old car.
+                list.Add("100 Tax is already paid.");//Tax is already paid.
+                list.Add("103 data cannot not.");//Server error.
+                list.Add("999 Server error.");//Server error.
+                list.Add("000 Success.");//Server error.
+                foreach (string wordcheck in list)
+                {
+                    if (P_CAL_TAX_MBL_message.Substring(0, 3) == wordcheck.Substring(0, 3))
+                    {
+                        P_CAL_TAX_MBL_message = wordcheck;
+                    }
+                }
+
+            }
+            else
+            {
+                P_CAL_TAX_MBL_message = ("999 Server error.");//Server error.
+            }
+            return P_CAL_TAX_MBL_message;
+
+        }
+
+
+
+
+
         public string returncheck_Message(string P_CAL_TAX_MBL_message)
         {
             string returemess = "";
             List<string> list = new List<string>();
-            list.Add("500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง");
-            list.Add("592 - อายุรถเกิน 5 ปี หรือ 7 ปี แล้วแต่กรณี");
-            list.Add("100 - ไม่พบข้อมูล");
-            list.Add("103 - จัดเก็บข้อมูลไม่สำเร็จ");
+            list.Add("500");//Important data cannot not be null.
+            list.Add("592");//Cannot process . Over a 5 or 7 year old car.
+            list.Add("100");//Tax is already paid.
+            list.Add("103");//Server error.
             foreach (string i in list)
             {
                 if (P_CAL_TAX_MBL_message.IndexOf(i) >= 0)
                 {
                     returemess = "1";
+                    return returemess;
+                }
+            }
+            return returemess;
+        }
+        public string Logfile(string data)
+        {
+            try
+            {
+                string filename = DateTime.Now.ToString("dd/MM/yyyy").Replace("-", "_");
+                string sPathName = System.Web.Hosting.HostingEnvironment.MapPath("~") + @"\Logfile\" + filename + ".txt";
+                StreamWriter sw = new StreamWriter(sPathName, true);
+                sw.WriteLine(DateTime.Now.ToString() + "," + data);
+                sw.Flush();
+                sw.Close();
+            }
+            catch
+            {
+
+                string sPathName = System.Web.Hosting.HostingEnvironment.MapPath("~") + @"\Logfile\" + "filelogError" + ".txt";
+                StreamWriter sw = new StreamWriter(sPathName, true);
+                sw.WriteLine(DateTime.Now.ToString() + "," + data);
+                sw.Flush();
+                sw.Close();
+            }
+            return "Log";
+        }
+        public string returncheck_Message_103(string P_CAL_TAX_MBL_message)
+        {
+            string returemess = "";
+            List<string> list = new List<string>();
+            list.Add("500");
+            list.Add("103");//Server error.
+            foreach (string i in list)
+            {
+                if (P_CAL_TAX_MBL_message.IndexOf(i) >= 0)
+                {
+                    returemess = "500 Important data cannot not be null";
                     return returemess;
                 }
             }

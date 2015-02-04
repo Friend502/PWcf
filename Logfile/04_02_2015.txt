@@ -1,0 +1,103 @@
+04-02-2015 8:59:25 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 8:59:26 AM,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 8:59:26 AM,,,,,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 9:00:28 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:00:28 AM,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 9:01:23 AM,,,,,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 9:01:41 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:01:41 AM,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 9:02:10 AM,,,,,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 9:02:50 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:02:50 AM,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 9:02:53 AM,,,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0,500 Important data cannot not be null Paysbuy return data to Cellum
+04-02-2015 9:04:41 AM,,MC222222,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:04:41 AM,,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 9:04:41 AM,,,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0,500 Important data cannot not be null Paysbuy return data to Cellum
+04-02-2015 9:10:06 AM,,AC33334,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:10:06 AM,AC33334,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 9:10:06 AM,,,AC33334,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0,500 Important data cannot not be null Paysbuy return data to Cellum
+04-02-2015 9:13:56 AM,,AC6666666,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:13:56 AM,AC6666666,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 9:13:56 AM,,,AC6666666,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0,500 Important data cannot not be null Paysbuy return data to Cellum
+04-02-2015 9:46:42 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:46:42 AM,
+04-02-2015 9:46:42 AM,,,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 9:59:54 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 9:59:54 AM,500 Important data cannot not be null. (haven't secureCode)
+04-02-2015 10:00:49 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 10:00:49 AM,500 Important data cannot not be null. (haven't secureCode)
+04-02-2015 10:01:19 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 10:01:20 AM,
+04-02-2015 10:01:20 AM,,,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 11:44:10 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 11:44:10 AM,500 Important data cannot not be null. (haven't secureCode)
+04-02-2015 11:57:41 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 11:57:41 AM,500 Important data cannot not be null. (haven't secureCode)
+04-02-2015 11:58:28 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 11:59:57 AM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:00:01 PM,
+04-02-2015 12:00:01 PM,,,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:00:27 PM,,,,,,,,,,,1,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:00:27 PM,
+04-02-2015 12:00:27 PM,,,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:00:30 PM,,,,,,,,,,,2,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:00:30 PM,
+04-02-2015 12:00:30 PM,,,,500 Important data cannot not be null,,Y,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:00:39 PM,,,,,,,,,,,2,1,1,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:00:39 PM,
+04-02-2015 12:00:39 PM,,,,500 Important data cannot not be null,,Y,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:01:45 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:01:45 PM,
+04-02-2015 12:01:45 PM,500 Important data cannot not be null,500 Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:03:13 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:03:13 PM,
+04-02-2015 12:03:13 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:13:24 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:13:24 PM,
+04-02-2015 12:13:24 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:13:49 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:13:50 PM,
+04-02-2015 12:14:28 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:14:28 PM,
+04-02-2015 12:14:28 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:17:41 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:17:41 PM,,103 - จัดเก็บข้อมูลไม่สำเร็จ,,,,,,,,,DLT return data 
+04-02-2015 12:17:41 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:17:46 PM,,,,,,,,,,,1,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:17:46 PM,,103 - จัดเก็บข้อมูลไม่สำเร็จ,,,,,,,,,DLT return data 
+04-02-2015 12:17:46 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:17:48 PM,,,,,,,,,,,1,1,1,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:17:48 PM,,,,,,,,,,,DLT return data 
+04-02-2015 12:18:47 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:19:33 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:19:56 PM,
+04-02-2015 12:19:56 PM,500,Important data cannot not be nul,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:20:31 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:20:31 PM,
+04-02-2015 12:20:31 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:20:50 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:20:50 PM,,103 - จัดเก็บข้อมูลไม่สำเร็จ,,,,,,,,,DLT return data 
+04-02-2015 12:20:50 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:20:54 PM,,,,,,,,,,,1,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:20:54 PM,,103 - จัดเก็บข้อมูลไม่สำเร็จ,,,,,,,,,DLT return data 
+04-02-2015 12:20:54 PM,500,Important data cannot not be null,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:20:57 PM,,,,,,,,,,,1,1,1,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:20:57 PM,,,,,,,,,,,DLT return data 
+04-02-2015 12:23:17 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:23:17 PM,
+04-02-2015 12:23:17 PM,500,Important data cannot not be null.,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:23:29 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:23:29 PM,,103 - จัดเก็บข้อมูลไม่สำเร็จ,,,,,,,,,DLT return data 
+04-02-2015 12:23:29 PM,500,Important data cannot not be null.,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:23:35 PM,,,,,,,,,,,1,1,1,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:23:35 PM,,,,,,,,,,,DLT return data 
+04-02-2015 12:23:35 PM,500,Important data cannot not be null.,,500 - Important data cannot not be null.,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:23:42 PM,,,,,,,,,,,2,1,1,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:23:42 PM,,103 - จัดเก็บข้อมูลไม่สำเร็จ,,,,,,,,,DLT return data 
+04-02-2015 12:23:42 PM,500,Important data cannot not be null.,,500 Important data cannot not be null,,Y,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:23:54 PM,1,1,1,1,1,1,1,1,1,1,2,1,1,1,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:23:54 PM,1,500 - ข้อมูลสำคัญมีค่าเป็น Null หรือไม่ถูกต้อง,,,,,,,,,DLT return data 
+04-02-2015 12:23:54 PM,500,Important data cannot not be null.,1,500 Important data cannot not be null,,Y,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
+04-02-2015 12:31:38 PM,,,,,,,,,,,,,,,Paysbuy receive data cellum GetInquiryVehicleInformation
+04-02-2015 12:31:38 PM,
+04-02-2015 12:31:38 PM,500,Important data cannot not be null.,,500 Important data cannot not be null,,N,0.00,0.00,0.00,0.00,0.00,,,,0, Paysbuy return data to Cellum
