@@ -47,10 +47,6 @@ namespace PWCF
 
         }
 
-
-
-
-
         public string returncheck_Message(string P_CAL_TAX_MBL_message)
         {
             string returemess = "";
@@ -69,12 +65,12 @@ namespace PWCF
             }
             return returemess;
         }
-        public string Logfile(string data)
+        public string Logfile(string data, string inquiryRefId,string Newfolder)
         {
             try
             {
                 string filename = DateTime.Now.ToString("dd/MM/yyyy").Replace("-", "_");
-                string sPathName = System.Web.Hosting.HostingEnvironment.MapPath("~") + @"\Logfile\" + filename + ".txt";
+                string sPathName = System.Web.Hosting.HostingEnvironment.MapPath("~") + "/" + Newfolder +"/" + inquiryRefId + ".csv";
                 StreamWriter sw = new StreamWriter(sPathName, true);
                 sw.WriteLine(DateTime.Now.ToString() + "," + data);
                 sw.Flush();
@@ -83,7 +79,7 @@ namespace PWCF
             catch
             {
 
-                string sPathName = System.Web.Hosting.HostingEnvironment.MapPath("~") + @"\Logfile\" + "filelogError" + ".txt";
+                string sPathName = System.Web.Hosting.HostingEnvironment.MapPath("~") + @"\LogError\" + "FileError" + ".csv";
                 StreamWriter sw = new StreamWriter(sPathName, true);
                 sw.WriteLine(DateTime.Now.ToString() + "," + data);
                 sw.Flush();
@@ -91,6 +87,9 @@ namespace PWCF
             }
             return "Log";
         }
+
+        
+
         public string returncheck_Message_103(string P_CAL_TAX_MBL_message)
         {
             string returemess = "";
@@ -107,5 +106,38 @@ namespace PWCF
             }
             return returemess;
         }
+
+        public string T_vehicleType(string a)
+        {
+            string directory = System.Web.Hosting.HostingEnvironment.MapPath("~/T_vehicleType.txt"); // ดึกข้อมูลจาก .txt file มาแสดง
+            string[] textData = System.IO.File.ReadAllLines(directory);
+            foreach (string wordcheck in textData)
+              {
+                 string[] s = wordcheck.Split(',');
+                 if (a == s[0].ToString())
+                    {
+                        a = s[5].ToString();
+                    }
+
+               }
+            return a;
+        }
+        public string T_provinceType(string a)
+        {
+            string directory2 = System.Web.Hosting.HostingEnvironment.MapPath("~/T_provinceType.txt"); // ดึกข้อมูลจาก .txt file มาแสดง
+            string[] textData2 = System.IO.File.ReadAllLines(directory2);
+            foreach (string wordcheck2 in textData2)
+                {
+                    string[] s2 = wordcheck2.Split(',');
+                    if (a == s2[0].ToString())
+                    {
+                        a = s2[2].ToString();
+                    }
+
+                }
+            return a;
+        }
+
+       
     }
 }

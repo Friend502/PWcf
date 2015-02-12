@@ -105,7 +105,10 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="img\" />
-    <Folder Include="Logfile\" />
+    <Folder Include="Logcompli\" />
+    <Folder Include="LogError\" />
+    <Folder Include="LogIn\" />
+    <Folder Include="LogOutError\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

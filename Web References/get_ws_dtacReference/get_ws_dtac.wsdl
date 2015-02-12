@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="api_paynow_happy_refill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psbID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="ref1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="method" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opt_fix_method" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="resp_front_url" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opt_name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opt_email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="api_paynow_happy_refillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="api_paynow_happy_refillResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="api_happy_verify">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="psbID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="inv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Channel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ref1" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="api_happy_verifyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="api_happy_verifyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="api_happy_confirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inv" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tranlog_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="api_happy_confirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="api_happy_confirmResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="postpaid_request_query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentChannel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paymentType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="postpaid_request_queryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="postpaid_request_queryResult" type="tns:ArrayOfReturnPostpaidRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnPostpaidRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="returnPostpaidRequest" type="tns:returnPostpaidRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="returnPostpaidRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="min" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="max" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="total" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="balance" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="reconnect" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="postpaid_request_confirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankTrxId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="postpaid_request_confirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="postpaid_request_confirmResult" type="tns:ArrayOfReturnPostpaidConfirm" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnPostpaidConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="returnPostpaidConfirm" type="tns:returnPostpaidConfirm" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="returnPostpaidConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfReturnPostpaidRequest" nillable="true" type="tns:ArrayOfReturnPostpaidRequest" />
+      <s:element name="ArrayOfReturnPostpaidConfirm" nillable="true" type="tns:ArrayOfReturnPostpaidConfirm" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="api_paynow_happy_refillSoapIn">
+    <wsdl:part name="parameters" element="tns:api_paynow_happy_refill" />
+  </wsdl:message>
+  <wsdl:message name="api_paynow_happy_refillSoapOut">
+    <wsdl:part name="parameters" element="tns:api_paynow_happy_refillResponse" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_verifySoapIn">
+    <wsdl:part name="parameters" element="tns:api_happy_verify" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_verifySoapOut">
+    <wsdl:part name="parameters" element="tns:api_happy_verifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_confirmSoapIn">
+    <wsdl:part name="parameters" element="tns:api_happy_confirm" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_confirmSoapOut">
+    <wsdl:part name="parameters" element="tns:api_happy_confirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_querySoapIn">
+    <wsdl:part name="parameters" element="tns:postpaid_request_query" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_querySoapOut">
+    <wsdl:part name="parameters" element="tns:postpaid_request_queryResponse" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_confirmSoapIn">
+    <wsdl:part name="parameters" element="tns:postpaid_request_confirm" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_confirmSoapOut">
+    <wsdl:part name="parameters" element="tns:postpaid_request_confirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="api_paynow_happy_refillHttpGetIn">
+    <wsdl:part name="psbID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="ref1" type="s:string" />
+    <wsdl:part name="inv" type="s:string" />
+    <wsdl:part name="method" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+    <wsdl:part name="opt_fix_method" type="s:string" />
+    <wsdl:part name="resp_front_url" type="s:string" />
+    <wsdl:part name="opt_name" type="s:string" />
+    <wsdl:part name="opt_email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="api_paynow_happy_refillHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_verifyHttpGetIn">
+    <wsdl:part name="psbID" type="s:string" />
+    <wsdl:part name="inv" type="s:string" />
+    <wsdl:part name="Channel" type="s:string" />
+    <wsdl:part name="ref1" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_verifyHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_confirmHttpGetIn">
+    <wsdl:part name="inv" type="s:string" />
+    <wsdl:part name="tranlog_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_confirmHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_queryHttpGetIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="paymentChannel" type="s:string" />
+    <wsdl:part name="paymentType" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_queryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnPostpaidRequest" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_confirmHttpGetIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="refID" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="confirmStatus" type="s:string" />
+    <wsdl:part name="bankTrxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_confirmHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnPostpaidConfirm" />
+  </wsdl:message>
+  <wsdl:message name="api_paynow_happy_refillHttpPostIn">
+    <wsdl:part name="psbID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="ref1" type="s:string" />
+    <wsdl:part name="inv" type="s:string" />
+    <wsdl:part name="method" type="s:string" />
+    <wsdl:part name="language" type="s:string" />
+    <wsdl:part name="opt_fix_method" type="s:string" />
+    <wsdl:part name="resp_front_url" type="s:string" />
+    <wsdl:part name="opt_name" type="s:string" />
+    <wsdl:part name="opt_email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="api_paynow_happy_refillHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_verifyHttpPostIn">
+    <wsdl:part name="psbID" type="s:string" />
+    <wsdl:part name="inv" type="s:string" />
+    <wsdl:part name="Channel" type="s:string" />
+    <wsdl:part name="ref1" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_verifyHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_confirmHttpPostIn">
+    <wsdl:part name="inv" type="s:string" />
+    <wsdl:part name="tranlog_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="api_happy_confirmHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_queryHttpPostIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="paymentChannel" type="s:string" />
+    <wsdl:part name="paymentType" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_queryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnPostpaidRequest" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_confirmHttpPostIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="refID" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="confirmStatus" type="s:string" />
+    <wsdl:part name="bankTrxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="postpaid_request_confirmHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnPostpaidConfirm" />
+  </wsdl:message>
+  <wsdl:portType name="get_ws_dtacSoap">
+    <wsdl:operation name="api_paynow_happy_refill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API PAYNOW Authentication Product</wsdl:documentation>
+      <wsdl:input message="tns:api_paynow_happy_refillSoapIn" />
+      <wsdl:output message="tns:api_paynow_happy_refillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API</wsdl:documentation>
+      <wsdl:input message="tns:api_happy_verifySoapIn" />
+      <wsdl:output message="tns:api_happy_verifySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API</wsdl:documentation>
+      <wsdl:input message="tns:api_happy_confirmSoapIn" />
+      <wsdl:output message="tns:api_happy_confirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verify subscriber  and return balance</wsdl:documentation>
+      <wsdl:input message="tns:postpaid_request_querySoapIn" />
+      <wsdl:output message="tns:postpaid_request_querySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Confirm payment ( input same verify)</wsdl:documentation>
+      <wsdl:input message="tns:postpaid_request_confirmSoapIn" />
+      <wsdl:output message="tns:postpaid_request_confirmSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="get_ws_dtacHttpGet">
+    <wsdl:operation name="api_paynow_happy_refill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API PAYNOW Authentication Product</wsdl:documentation>
+      <wsdl:input message="tns:api_paynow_happy_refillHttpGetIn" />
+      <wsdl:output message="tns:api_paynow_happy_refillHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API</wsdl:documentation>
+      <wsdl:input message="tns:api_happy_verifyHttpGetIn" />
+      <wsdl:output message="tns:api_happy_verifyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API</wsdl:documentation>
+      <wsdl:input message="tns:api_happy_confirmHttpGetIn" />
+      <wsdl:output message="tns:api_happy_confirmHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verify subscriber  and return balance</wsdl:documentation>
+      <wsdl:input message="tns:postpaid_request_queryHttpGetIn" />
+      <wsdl:output message="tns:postpaid_request_queryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Confirm payment ( input same verify)</wsdl:documentation>
+      <wsdl:input message="tns:postpaid_request_confirmHttpGetIn" />
+      <wsdl:output message="tns:postpaid_request_confirmHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="get_ws_dtacHttpPost">
+    <wsdl:operation name="api_paynow_happy_refill">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API PAYNOW Authentication Product</wsdl:documentation>
+      <wsdl:input message="tns:api_paynow_happy_refillHttpPostIn" />
+      <wsdl:output message="tns:api_paynow_happy_refillHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API</wsdl:documentation>
+      <wsdl:input message="tns:api_happy_verifyHttpPostIn" />
+      <wsdl:output message="tns:api_happy_verifyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">API</wsdl:documentation>
+      <wsdl:input message="tns:api_happy_confirmHttpPostIn" />
+      <wsdl:output message="tns:api_happy_confirmHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Verify subscriber  and return balance</wsdl:documentation>
+      <wsdl:input message="tns:postpaid_request_queryHttpPostIn" />
+      <wsdl:output message="tns:postpaid_request_queryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Confirm payment ( input same verify)</wsdl:documentation>
+      <wsdl:input message="tns:postpaid_request_confirmHttpPostIn" />
+      <wsdl:output message="tns:postpaid_request_confirmHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="get_ws_dtacSoap" type="tns:get_ws_dtacSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="api_paynow_happy_refill">
+      <soap:operation soapAction="http://tempuri.org/api_paynow_happy_refill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <soap:operation soapAction="http://tempuri.org/api_happy_verify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <soap:operation soapAction="http://tempuri.org/api_happy_confirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <soap:operation soapAction="http://tempuri.org/postpaid_request_query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <soap:operation soapAction="http://tempuri.org/postpaid_request_confirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="get_ws_dtacSoap12" type="tns:get_ws_dtacSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="api_paynow_happy_refill">
+      <soap12:operation soapAction="http://tempuri.org/api_paynow_happy_refill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <soap12:operation soapAction="http://tempuri.org/api_happy_verify" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <soap12:operation soapAction="http://tempuri.org/api_happy_confirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <soap12:operation soapAction="http://tempuri.org/postpaid_request_query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <soap12:operation soapAction="http://tempuri.org/postpaid_request_confirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="get_ws_dtacHttpGet" type="tns:get_ws_dtacHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="api_paynow_happy_refill">
+      <http:operation location="/api_paynow_happy_refill" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <http:operation location="/api_happy_verify" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <http:operation location="/api_happy_confirm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <http:operation location="/postpaid_request_query" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <http:operation location="/postpaid_request_confirm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="get_ws_dtacHttpPost" type="tns:get_ws_dtacHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="api_paynow_happy_refill">
+      <http:operation location="/api_paynow_happy_refill" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_verify">
+      <http:operation location="/api_happy_verify" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="api_happy_confirm">
+      <http:operation location="/api_happy_confirm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_query">
+      <http:operation location="/postpaid_request_query" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postpaid_request_confirm">
+      <http:operation location="/postpaid_request_confirm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="get_ws_dtac">
+    <wsdl:port name="get_ws_dtacSoap" binding="tns:get_ws_dtacSoap">
+      <soap:address location="https://demo.paysbuy.com/psb_ws/get_ws_dtac.asmx" />
+    </wsdl:port>
+    <wsdl:port name="get_ws_dtacSoap12" binding="tns:get_ws_dtacSoap12">
+      <soap12:address location="https://demo.paysbuy.com/psb_ws/get_ws_dtac.asmx" />
+    </wsdl:port>
+    <wsdl:port name="get_ws_dtacHttpGet" binding="tns:get_ws_dtacHttpGet">
+      <http:address location="https://demo.paysbuy.com/psb_ws/get_ws_dtac.asmx" />
+    </wsdl:port>
+    <wsdl:port name="get_ws_dtacHttpPost" binding="tns:get_ws_dtacHttpPost">
+      <http:address location="https://demo.paysbuy.com/psb_ws/get_ws_dtac.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

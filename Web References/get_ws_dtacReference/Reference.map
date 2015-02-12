@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://demo.paysbuy.com/psb_ws/get_ws_dtac.asmx?disco" filename="get_ws_dtac.disco" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://demo.paysbuy.com/psb_ws/get_ws_dtac.asmx?wsdl" filename="get_ws_dtac.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

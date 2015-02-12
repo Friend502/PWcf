@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="mea_request_query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contractAC" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mea_request_queryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mea_request_queryResult" type="tns:ArrayOfReturnMeaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnMeaRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="returnMeaRequest" type="tns:returnMeaRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="returnMeaRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ref1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="dueDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="invoiceDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="discountAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mea_request_confirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amt" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="fee" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardsNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankTrxId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mea_request_confirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mea_request_confirmResult" type="tns:ArrayOfReturnMeaConfirm" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnMeaConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="returnMeaConfirm" type="tns:returnMeaConfirm" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="returnMeaConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mwa_request_query">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="suffix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ref1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ref2" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mwa_request_queryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mwa_request_queryResult" type="tns:ArrayOfReturnMwaRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnMwaRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="returnMwaRequest" type="tns:returnMwaRequest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="returnMwaRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="mwa_request_confirm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="secureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="refID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="fee" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="confirmStatus" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cardsNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bankTrxId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="mwa_request_confirmResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mwa_request_confirmResult" type="tns:ArrayOfReturnMwaConfirm" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfReturnMwaConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="returnMwaConfirm" type="tns:returnMwaConfirm" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="returnMwaConfirm">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="tid" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="respMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="refId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ArrayOfReturnMeaRequest" nillable="true" type="tns:ArrayOfReturnMeaRequest" />
+      <s:element name="ArrayOfReturnMeaConfirm" nillable="true" type="tns:ArrayOfReturnMeaConfirm" />
+      <s:element name="ArrayOfReturnMwaRequest" nillable="true" type="tns:ArrayOfReturnMwaRequest" />
+      <s:element name="ArrayOfReturnMwaConfirm" nillable="true" type="tns:ArrayOfReturnMwaConfirm" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="mea_request_querySoapIn">
+    <wsdl:part name="parameters" element="tns:mea_request_query" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_querySoapOut">
+    <wsdl:part name="parameters" element="tns:mea_request_queryResponse" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_confirmSoapIn">
+    <wsdl:part name="parameters" element="tns:mea_request_confirm" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_confirmSoapOut">
+    <wsdl:part name="parameters" element="tns:mea_request_confirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_querySoapIn">
+    <wsdl:part name="parameters" element="tns:mwa_request_query" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_querySoapOut">
+    <wsdl:part name="parameters" element="tns:mwa_request_queryResponse" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_confirmSoapIn">
+    <wsdl:part name="parameters" element="tns:mwa_request_confirm" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_confirmSoapOut">
+    <wsdl:part name="parameters" element="tns:mwa_request_confirmResponse" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_queryHttpGetIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="contractAC" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_queryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMeaRequest" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_confirmHttpGetIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="refID" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="fee" type="s:string" />
+    <wsdl:part name="confirmStatus" type="s:string" />
+    <wsdl:part name="cardsNo" type="s:string" />
+    <wsdl:part name="bankTrxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_confirmHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMeaConfirm" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_queryHttpGetIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="taxID" type="s:string" />
+    <wsdl:part name="suffix" type="s:string" />
+    <wsdl:part name="ref1" type="s:string" />
+    <wsdl:part name="ref2" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_queryHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMwaRequest" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_confirmHttpGetIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="refID" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="fee" type="s:string" />
+    <wsdl:part name="confirmStatus" type="s:string" />
+    <wsdl:part name="cardsNo" type="s:string" />
+    <wsdl:part name="bankTrxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_confirmHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMwaConfirm" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_queryHttpPostIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="contractAC" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_queryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMeaRequest" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_confirmHttpPostIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="refID" type="s:string" />
+    <wsdl:part name="amt" type="s:string" />
+    <wsdl:part name="fee" type="s:string" />
+    <wsdl:part name="confirmStatus" type="s:string" />
+    <wsdl:part name="cardsNo" type="s:string" />
+    <wsdl:part name="bankTrxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mea_request_confirmHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMeaConfirm" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_queryHttpPostIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="taxID" type="s:string" />
+    <wsdl:part name="suffix" type="s:string" />
+    <wsdl:part name="ref1" type="s:string" />
+    <wsdl:part name="ref2" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="mobileNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_queryHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMwaRequest" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_confirmHttpPostIn">
+    <wsdl:part name="secureCode" type="s:string" />
+    <wsdl:part name="tid" type="s:string" />
+    <wsdl:part name="refID" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="fee" type="s:string" />
+    <wsdl:part name="confirmStatus" type="s:string" />
+    <wsdl:part name="cardsNo" type="s:string" />
+    <wsdl:part name="bankTrxId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="mwa_request_confirmHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfReturnMwaConfirm" />
+  </wsdl:message>
+  <wsdl:portType name="getToppingSoap">
+    <wsdl:operation name="mea_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Electricity Authority - Verify subscriber  and return balance</wsdl:documentation>
+      <wsdl:input message="tns:mea_request_querySoapIn" />
+      <wsdl:output message="tns:mea_request_querySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Electricity Authority - Confirm payment ( input same verify)</wsdl:documentation>
+      <wsdl:input message="tns:mea_request_confirmSoapIn" />
+      <wsdl:output message="tns:mea_request_confirmSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Waterworks Authority - Request transaction</wsdl:documentation>
+      <wsdl:input message="tns:mwa_request_querySoapIn" />
+      <wsdl:output message="tns:mwa_request_querySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Waterworks Authority - Same request</wsdl:documentation>
+      <wsdl:input message="tns:mwa_request_confirmSoapIn" />
+      <wsdl:output message="tns:mwa_request_confirmSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="getToppingHttpGet">
+    <wsdl:operation name="mea_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Electricity Authority - Verify subscriber  and return balance</wsdl:documentation>
+      <wsdl:input message="tns:mea_request_queryHttpGetIn" />
+      <wsdl:output message="tns:mea_request_queryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Electricity Authority - Confirm payment ( input same verify)</wsdl:documentation>
+      <wsdl:input message="tns:mea_request_confirmHttpGetIn" />
+      <wsdl:output message="tns:mea_request_confirmHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Waterworks Authority - Request transaction</wsdl:documentation>
+      <wsdl:input message="tns:mwa_request_queryHttpGetIn" />
+      <wsdl:output message="tns:mwa_request_queryHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Waterworks Authority - Same request</wsdl:documentation>
+      <wsdl:input message="tns:mwa_request_confirmHttpGetIn" />
+      <wsdl:output message="tns:mwa_request_confirmHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="getToppingHttpPost">
+    <wsdl:operation name="mea_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Electricity Authority - Verify subscriber  and return balance</wsdl:documentation>
+      <wsdl:input message="tns:mea_request_queryHttpPostIn" />
+      <wsdl:output message="tns:mea_request_queryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Electricity Authority - Confirm payment ( input same verify)</wsdl:documentation>
+      <wsdl:input message="tns:mea_request_confirmHttpPostIn" />
+      <wsdl:output message="tns:mea_request_confirmHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Waterworks Authority - Request transaction</wsdl:documentation>
+      <wsdl:input message="tns:mwa_request_queryHttpPostIn" />
+      <wsdl:output message="tns:mwa_request_queryHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Metropolitan Waterworks Authority - Same request</wsdl:documentation>
+      <wsdl:input message="tns:mwa_request_confirmHttpPostIn" />
+      <wsdl:output message="tns:mwa_request_confirmHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="getToppingSoap" type="tns:getToppingSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mea_request_query">
+      <soap:operation soapAction="http://tempuri.org/mea_request_query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <soap:operation soapAction="http://tempuri.org/mea_request_confirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <soap:operation soapAction="http://tempuri.org/mwa_request_query" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <soap:operation soapAction="http://tempuri.org/mwa_request_confirm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="getToppingSoap12" type="tns:getToppingSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="mea_request_query">
+      <soap12:operation soapAction="http://tempuri.org/mea_request_query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <soap12:operation soapAction="http://tempuri.org/mea_request_confirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <soap12:operation soapAction="http://tempuri.org/mwa_request_query" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <soap12:operation soapAction="http://tempuri.org/mwa_request_confirm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="getToppingHttpGet" type="tns:getToppingHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="mea_request_query">
+      <http:operation location="/mea_request_query" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <http:operation location="/mea_request_confirm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <http:operation location="/mwa_request_query" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <http:operation location="/mwa_request_confirm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="getToppingHttpPost" type="tns:getToppingHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="mea_request_query">
+      <http:operation location="/mea_request_query" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mea_request_confirm">
+      <http:operation location="/mea_request_confirm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_query">
+      <http:operation location="/mwa_request_query" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mwa_request_confirm">
+      <http:operation location="/mwa_request_confirm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="getTopping">
+    <wsdl:port name="getToppingSoap" binding="tns:getToppingSoap">
+      <soap:address location="https://demo.paysbuy.com/psb_ws/getTopping.asmx" />
+    </wsdl:port>
+    <wsdl:port name="getToppingSoap12" binding="tns:getToppingSoap12">
+      <soap12:address location="https://demo.paysbuy.com/psb_ws/getTopping.asmx" />
+    </wsdl:port>
+    <wsdl:port name="getToppingHttpGet" binding="tns:getToppingHttpGet">
+      <http:address location="https://demo.paysbuy.com/psb_ws/getTopping.asmx" />
+    </wsdl:port>
+    <wsdl:port name="getToppingHttpPost" binding="tns:getToppingHttpPost">
+      <http:address location="https://demo.paysbuy.com/psb_ws/getTopping.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
